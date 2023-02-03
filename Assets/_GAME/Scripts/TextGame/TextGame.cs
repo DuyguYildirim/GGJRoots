@@ -6,7 +6,7 @@ using Ambrosia.EventBus;
 
 public class TextGame : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI mainText;
+     [SerializeField] private TextMeshProUGUI mainText;
     [SerializeField] private TextMeshProUGUI yesText;
     [SerializeField] private TextMeshProUGUI noText;
     [SerializeField] private GameObject dieText;
