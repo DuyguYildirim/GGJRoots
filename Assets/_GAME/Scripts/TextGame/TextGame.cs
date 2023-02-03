@@ -9,6 +9,7 @@ public class TextGame : MonoBehaviour
     [SerializeField] private TextMeshProUGUI mainText;
     [SerializeField] private TextMeshProUGUI yesText;
     [SerializeField] private TextMeshProUGUI noText;
+    [SerializeField] private GameObject dieText;
     private string _mainString = "";
     private string _yesString = "";
     private string _noString = "";
@@ -18,6 +19,7 @@ public class TextGame : MonoBehaviour
     private bool _text2Active = true;
     private bool _text3Active = true;
     private bool _text4Active = true;
+    private bool _dieActive = false;
 
     private void Update()
     {
@@ -36,13 +38,21 @@ public class TextGame : MonoBehaviour
         //No text
         else if (Input.GetKey(KeyCode.B) && _index == 0 && _text2Active)
         {
+            dieText.SetActive(true);
+            _dieActive = true;
+            _text2Active = false;
+            _text1Active = true;
+            _mainString = " ";
+            _yesString = " ";
+            _noString = " ";
+            StartCoroutine(WaitAndPrintNo(0, _noString, _yesString, _mainString));
             //Başa dön
-            _mainString =
-                "You are a adventurer traveling through a dense jungle in search of a lost temple. You have a map, a backpack, and a machete.As you walk, you come to a fork in the road. To the left is a dark and narrow path, to the right is a wider path with lighter vegetation.Which path do you take?";
-            _yesString = "Take the dark and narrow path";
-            _noString = "Take the wider path with lighter vegetation";
-            _index = 0;
-            StartCoroutine(WaitAndPrintNo(1, _yesString, _noString, _mainString));
+            // _mainString =
+            //     "You are a adventurer traveling through a dense jungle in search of a lost temple. You have a map, a backpack, and a machete.As you walk, you come to a fork in the road. To the left is a dark and narrow path, to the right is a wider path with lighter vegetation.Which path do you take?";
+            // _yesString = "Take the dark and narrow path";
+            // _noString = "Take the wider path with lighter vegetation";
+            // _index = 0;
+            // StartCoroutine(WaitAndPrintNo(1, _yesString, _noString, _mainString));
             _text1Active = true;
             _text2Active = false;
         }
@@ -60,7 +70,33 @@ public class TextGame : MonoBehaviour
         //No text 2
         else if (Input.GetKey(KeyCode.Alpha2) && _index == 1 && _text4Active)
         {
+            dieText.SetActive(true);
+            _dieActive = true;
+            _text4Active = false;
+            _text1Active = true;
+            _mainString = " ";
+            _yesString = " ";
+            _noString = " ";
+            StartCoroutine(WaitAndPrintNo(0, _noString, _yesString, _mainString));
             //en başa dön
+            // _mainString =
+            //     "You are a adventurer traveling through a dense jungle in search of a lost temple. You have a map, a backpack, and a machete.As you walk, you come to a fork in the road. To the left is a dark and narrow path, to the right is a wider path with lighter vegetation.Which path do you take?";
+            // _yesString = "Take the dark and narrow path";
+            // _noString = "Take the wider path with lighter vegetation";
+            // _index = 0;
+            // _text1Active = true;
+            // _text4Active = false;
+            // StartCoroutine(WaitAndPrintNo(1, _noString, _yesString, _mainString));
+        }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            dieText.SetActive(false);
+            _dieActive = false;
+        }
+
+        if (_dieActive)
+        {
             _mainString =
                 "You are a adventurer traveling through a dense jungle in search of a lost temple. You have a map, a backpack, and a machete.As you walk, you come to a fork in the road. To the left is a dark and narrow path, to the right is a wider path with lighter vegetation.Which path do you take?";
             _yesString = "Take the dark and narrow path";
