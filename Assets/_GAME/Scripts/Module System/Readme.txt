@@ -1,0 +1,1 @@
+"ModuleRegistry" objesini "Resources" klasörüne at!!!!
