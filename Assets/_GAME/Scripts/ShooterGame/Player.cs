@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -10,8 +11,12 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float rotationsPerMinute;
 
+    [SerializeField] private Transform gunTransform;
+
     void Update()
     {
+        #region Movement
+
         //ileri-geri
         float vertical = Input.GetAxis("Vertical");
 
@@ -30,5 +35,25 @@ public class Player : MonoBehaviour
 
         Vector3 move = transform.forward * vertical;
         characterController.Move(move * playerSpeed * Time.deltaTime);
+
+        #endregion
+
+        #region Shoot
+
+        RaycastHit hit;
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (Physics.Raycast(gunTransform.position, gunTransform.TransformDirection(Vector3.forward), out hit,
+                    Mathf.Infinity))
+            {
+                if (hit.transform.gameObject.CompareTag("Enemy"))
+                {
+                    Debug.Log("Did Hit");
+                    Destroy(hit.transform.gameObject);
+                }
+            }
+        }
+
+        #endregion
     }
 }
