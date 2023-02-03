@@ -130,10 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4444012452263075146, guid: f7a9a5c70caa9c949889a72814b88960, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7cb8094357a0f544fb174fb6e3096e77, type: 2}
     - target: {fileID: 4444012452424289388, guid: f7a9a5c70caa9c949889a72814b88960, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -181,10 +177,6 @@ PrefabInstance:
     - target: {fileID: 4444012452424289395, guid: f7a9a5c70caa9c949889a72814b88960, type: 3}
       propertyPath: m_Name
       value: ShooterGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 4444012452424289395, guid: f7a9a5c70caa9c949889a72814b88960, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7a9a5c70caa9c949889a72814b88960, type: 3}
@@ -615,14 +607,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 369801276, guid: 2f82dbc476dfd464ba063b3f501cbcfb, type: 3}
-      propertyPath: m_Name
-      value: DieText
-      objectReference: {fileID: 0}
-    - target: {fileID: 369801276, guid: 2f82dbc476dfd464ba063b3f501cbcfb, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6180114011943474634, guid: 2f82dbc476dfd464ba063b3f501cbcfb, type: 3}
       propertyPath: m_Name
       value: TextGameCanvas
