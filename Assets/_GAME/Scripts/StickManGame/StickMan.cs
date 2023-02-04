@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using _GAME.Scripts.Events;
 using Ambrosia.EventBus;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class StickMan : MonoBehaviour
@@ -53,6 +54,11 @@ public class StickMan : MonoBehaviour
             dieText.SetActive(true);
             StartCoroutine(WaitAndDie(1));
             //UI çıkıcak buttona basınca oyun tekrar başlıcak
+        }
+
+        if (coll.gameObject.CompareTag("Finish"))
+        {
+            EventBus<StickManGameWinEvent>.Emit(this, new StickManGameWinEvent());
         }
     }
 
