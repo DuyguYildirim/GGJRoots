@@ -9,11 +9,12 @@ public class StickMan : MonoBehaviour
     [SerializeField] private Animator anim;
 
     [SerializeField] private float playerSpeed;
+    [SerializeField] private GameObject dieText;
 
     void Update()
     {
         #region Movement
-        
+
         float horizontal = Input.GetAxis("Horizontal");
 
         Vector3 move = transform.right * horizontal;
@@ -40,4 +41,17 @@ public class StickMan : MonoBehaviour
 
         #endregion
     }
+
+    private void OnTriggerEnter(Collider coll)
+    {
+        if (coll.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(coll.gameObject);
+            playerSpeed = 0;
+            dieText.SetActive(true);
+            //UI çıkıcak buttona basınca oyun tekrar başlıcak
+        }
+    }
+    
+    
 }
