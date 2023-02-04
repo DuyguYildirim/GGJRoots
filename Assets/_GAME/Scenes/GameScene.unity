@@ -172,6 +172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44149538eee4e64db4673c2da44c3ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _textAdventureState: {fileID: 0}
+  stickmanAdventure: {fileID: 0}
 --- !u!1001 &483243313
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1092,7 +1094,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3741582525392218818, guid: cd240d699c6fe814691711d952427939, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3741582525392218819, guid: cd240d699c6fe814691711d952427939, type: 3}
       propertyPath: m_RootOrder

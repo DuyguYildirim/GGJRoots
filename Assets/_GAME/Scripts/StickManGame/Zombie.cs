@@ -10,15 +10,15 @@ public class Zombie : MonoBehaviour
     {
         Sequence sq = DOTween.Sequence();
         sq.Join(
-            transform.DOLocalMove(new Vector3(transform.position.x - 1, 0, 0),
+            transform.DOLocalMove(new Vector3(transform.localPosition.x - 0.5f, 0, 0),
                 5));
         sq.Append(transform.DOLocalRotate(new Vector3(0, -90, 0), 1));
         sq.Append(transform.DOLocalMove(
-            new Vector3(transform.position.x + 1, 0, 0),
+            new Vector3(transform.localPosition.x + 0.5f, 0, 0),
             5));
         sq.Append(transform.DOLocalRotate(new Vector3(0, 90, 0), 1));
         sq.Append(transform.DOLocalMove(
-            new Vector3(transform.position.x + -1, 0, 0),
+            new Vector3(transform.localPosition.x - 0.5f, 0, 0),
             5));
         sq.SetLoops(-1, LoopType.Restart);
     }
