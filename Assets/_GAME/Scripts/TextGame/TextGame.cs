@@ -1,17 +1,18 @@
 using System.Collections;
 using _GAME.Scripts.Events;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using Ambrosia.EventBus;
-using UnityEngine.SceneManagement;
 
 public class TextGame : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI mainText;
     [SerializeField] private TextMeshProUGUI yesText;
+
     [SerializeField] private TextMeshProUGUI noText;
+
     [SerializeField] private GameObject dieText;
+
     private string _mainString = "";
     private string _yesString = "";
     private string _noString = "";

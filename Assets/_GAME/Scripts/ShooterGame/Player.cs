@@ -53,6 +53,11 @@ public class Player : MonoBehaviour
                     Destroy(hit.transform.gameObject);
                 }
             }
+
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+            }
         }
 
         #endregion
