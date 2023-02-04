@@ -1,12 +1,14 @@
 using System.Collections;
+using _GAME.Scripts.Events;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using Ambrosia.EventBus;
+using UnityEngine.SceneManagement;
 
 public class TextGame : MonoBehaviour
 {
-     [SerializeField] private TextMeshProUGUI mainText;
+    [SerializeField] private TextMeshProUGUI mainText;
     [SerializeField] private TextMeshProUGUI yesText;
     [SerializeField] private TextMeshProUGUI noText;
     [SerializeField] private GameObject dieText;
@@ -42,10 +44,7 @@ public class TextGame : MonoBehaviour
             _dieActive = true;
             _text2Active = false;
             _text1Active = true;
-            _mainString = " ";
-            _yesString = " ";
-            _noString = " ";
-            StartCoroutine(WaitAndPrintNo(0, _noString, _yesString, _mainString));
+            StartCoroutine(WaitAndDie(1));
             //Başa dön
             // _mainString =
             //     "You are a adventurer traveling through a dense jungle in search of a lost temple. You have a map, a backpack, and a machete.As you walk, you come to a fork in the road. To the left is a dark and narrow path, to the right is a wider path with lighter vegetation.Which path do you take?";
@@ -64,7 +63,7 @@ public class TextGame : MonoBehaviour
             _mainString = "You dive in the pool";
             mainText.text = _mainString;
             _text3Active = false;
-            EventBus<PlayStickmanStateEvent>.Emit(this, new PlayStickmanStateEvent());
+            EventBus<TextGameWinEvent>.Emit(this, new TextGameWinEvent());
         }
 
         //No text 2
@@ -74,10 +73,12 @@ public class TextGame : MonoBehaviour
             _dieActive = true;
             _text4Active = false;
             _text1Active = true;
-            _mainString = " ";
-            _yesString = " ";
-            _noString = " ";
-            StartCoroutine(WaitAndPrintNo(0, _noString, _yesString, _mainString));
+
+            StartCoroutine(WaitAndDie(1));
+            // _mainString = " ";
+            // _yesString = " ";
+            // _noString = " ";
+            // StartCoroutine(WaitAndPrintNo(0, _noString, _yesString, _mainString));
             //en başa dön
             // _mainString =
             //     "You are a adventurer traveling through a dense jungle in search of a lost temple. You have a map, a backpack, and a machete.As you walk, you come to a fork in the road. To the left is a dark and narrow path, to the right is a wider path with lighter vegetation.Which path do you take?";
@@ -89,23 +90,23 @@ public class TextGame : MonoBehaviour
             // StartCoroutine(WaitAndPrintNo(1, _noString, _yesString, _mainString));
         }
 
-        if (Input.GetKey(KeyCode.Space))
-        {
-            dieText.SetActive(false);
-            _dieActive = false;
-        }
+        // if (Input.GetKey(KeyCode.Space))
+        // {
+        //     dieText.SetActive(false);
+        //     _dieActive = false;
+        // }
 
-        if (_dieActive)
-        {
-            _mainString =
-                "You are a adventurer traveling through a dense jungle in search of a lost temple. You have a map, a backpack, and a machete.As you walk, you come to a fork in the road. To the left is a dark and narrow path, to the right is a wider path with lighter vegetation.Which path do you take?";
-            _yesString = "Take the dark and narrow path";
-            _noString = "Take the wider path with lighter vegetation";
-            _index = 0;
-            _text1Active = true;
-            _text4Active = false;
-            StartCoroutine(WaitAndPrintNo(1, _noString, _yesString, _mainString));
-        }
+        // if (_dieActive)
+        // {
+        //     _mainString =
+        //         "You are a adventurer traveling through a dense jungle in search of a lost temple. You have a map, a backpack, and a machete.As you walk, you come to a fork in the road. To the left is a dark and narrow path, to the right is a wider path with lighter vegetation.Which path do you take?";
+        //     _yesString = "Take the dark and narrow path";
+        //     _noString = "Take the wider path with lighter vegetation";
+        //     _index = 0;
+        //     _text1Active = true;
+        //     _text4Active = false;
+        //     StartCoroutine(WaitAndPrintNo(1, _noString, _yesString, _mainString));
+        // }
     }
 
 
@@ -127,5 +128,11 @@ public class TextGame : MonoBehaviour
         _noString = textNo;
         noText.text = _noString;
         yesText.text = _yesString;
+    }
+
+    IEnumerator WaitAndDie(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        EventBus<GameLoseEvent>.Emit(this, new GameLoseEvent());
     }
 }
