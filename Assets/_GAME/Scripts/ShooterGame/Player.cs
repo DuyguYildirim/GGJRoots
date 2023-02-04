@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
@@ -51,6 +52,11 @@ public class Player : MonoBehaviour
                     Debug.Log("Did Hit");
                     Destroy(hit.transform.gameObject);
                 }
+            }
+
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
             }
         }
 

@@ -1,6 +1,8 @@
+using _GAME.Scripts.Events;
 using Ambrosia.EventBus;
 using Ambrosia.StateMachine;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace _GAME.Scripts.States
 {
@@ -10,15 +12,22 @@ namespace _GAME.Scripts.States
 
         protected override void OnEnter()
         {
-            EventBus<PlayStickmanStateEvent>.AddListener(OnPlayStickmanState);
+            EventBus<TextGameWinEvent>.AddListener(OnTextGameWin);
+            EventBus<GameLoseEvent>.AddListener(OnGameLose);
         }
 
         protected override void OnExit()
         {
-            EventBus<PlayStickmanStateEvent>.RemoveListener(OnPlayStickmanState);
+            EventBus<TextGameWinEvent>.RemoveListener(OnTextGameWin);
+            EventBus<GameLoseEvent>.RemoveListener(OnGameLose);
         }
 
-        private void OnPlayStickmanState(object sender, PlayStickmanStateEvent @event)
+        private void OnGameLose(object sender, GameLoseEvent @event)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        private void OnTextGameWin(object sender, TextGameWinEvent @event)
         {
             TextCanvas.SetActive(false);
             StateMachine.TransitionToNextState();
