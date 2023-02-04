@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using _GAME.Scripts.Events;
+using Ambrosia.EventBus;
 using UnityEngine;
 
 public class StickMan : MonoBehaviour
@@ -49,9 +51,14 @@ public class StickMan : MonoBehaviour
             Destroy(coll.gameObject);
             playerSpeed = 0;
             dieText.SetActive(true);
+            StartCoroutine(WaitAndDie(1));
             //UI çıkıcak buttona basınca oyun tekrar başlıcak
         }
     }
-    
-    
+
+    IEnumerator WaitAndDie(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        EventBus<GameLoseEvent>.Emit(this, new GameLoseEvent());
+    }
 }

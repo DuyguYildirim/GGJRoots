@@ -1,17 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
+using _GAME.Scripts.Events;
+using Ambrosia.EventBus;
 using Ambrosia.StateMachine;
-using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StickmanAdventureState : State
 {
     protected override void OnEnter()
     {
-        Debug.Log("******************************************************");
+       EventBus<GameLoseEvent>.AddListener(OnGameLose);
     }
 
     protected override void OnExit()
     {
-        
+        EventBus<GameLoseEvent>.RemoveListener(OnGameLose);
+    }
+
+    private void OnGameLose(object sender, GameLoseEvent @event)
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
