@@ -26,12 +26,12 @@ public class Player : MonoBehaviour
 
         if (horizontal < 0)
         {
-            transform.Rotate(0, 6f * rotationsPerMinute * Time.deltaTime, 0);
+            transform.Rotate(0, 6f * -rotationsPerMinute * Time.deltaTime, 0);
         }
 
         if (horizontal > 0)
         {
-            transform.Rotate(0, 6f * -rotationsPerMinute * Time.deltaTime, 0);
+            transform.Rotate(0, 6f * rotationsPerMinute * Time.deltaTime, 0);
         }
 
         Vector3 move = transform.forward * vertical;
