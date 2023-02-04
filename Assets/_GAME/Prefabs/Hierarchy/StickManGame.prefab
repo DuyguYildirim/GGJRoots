@@ -1559,7 +1559,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &350729790354904474
 Transform:
   m_ObjectHideFlags: 0
@@ -1633,6 +1633,14 @@ PrefabInstance:
     - target: {fileID: 1740034982143910835, guid: 97523079a5ac890408ea71d10464ec34, type: 3}
       propertyPath: m_Name
       value: ZombieCtrl (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7768689939007669988, guid: 97523079a5ac890408ea71d10464ec34, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00076528493
+      objectReference: {fileID: 0}
+    - target: {fileID: 7768689939007669988, guid: 97523079a5ac890408ea71d10464ec34, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.115815446
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97523079a5ac890408ea71d10464ec34, type: 3}
@@ -1758,6 +1766,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZombieCtrl (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7768689939007669988, guid: 97523079a5ac890408ea71d10464ec34, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00076528493
+      objectReference: {fileID: 0}
+    - target: {fileID: 7768689939007669988, guid: 97523079a5ac890408ea71d10464ec34, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.115815446
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97523079a5ac890408ea71d10464ec34, type: 3}
 --- !u!4 &2088494275676988145 stripped
@@ -1819,6 +1835,14 @@ PrefabInstance:
     - target: {fileID: 1740034982143910835, guid: 97523079a5ac890408ea71d10464ec34, type: 3}
       propertyPath: m_Name
       value: ZombieCtrl
+      objectReference: {fileID: 0}
+    - target: {fileID: 7768689939007669988, guid: 97523079a5ac890408ea71d10464ec34, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00076528493
+      objectReference: {fileID: 0}
+    - target: {fileID: 7768689939007669988, guid: 97523079a5ac890408ea71d10464ec34, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.115815446
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97523079a5ac890408ea71d10464ec34, type: 3}
@@ -1882,6 +1906,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZombieCtrl (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7768689939007669988, guid: 97523079a5ac890408ea71d10464ec34, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00076528493
+      objectReference: {fileID: 0}
+    - target: {fileID: 7768689939007669988, guid: 97523079a5ac890408ea71d10464ec34, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.115815446
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97523079a5ac890408ea71d10464ec34, type: 3}
 --- !u!4 &2088494274559047196 stripped
@@ -1898,19 +1930,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2453014821736925793, guid: 98755f7b1d0653245b192e86821b6d69, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.0035712114
+      value: -0.003571212
       objectReference: {fileID: 0}
     - target: {fileID: 2453014821736925793, guid: 98755f7b1d0653245b192e86821b6d69, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.033211622
+      value: -0.033211634
       objectReference: {fileID: 0}
     - target: {fileID: 5395327051204822505, guid: 98755f7b1d0653245b192e86821b6d69, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.012124079
+      value: 0.012124082
       objectReference: {fileID: 0}
     - target: {fileID: 5395327051204822505, guid: 98755f7b1d0653245b192e86821b6d69, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.058150806
+      value: 0.058150817
       objectReference: {fileID: 0}
     - target: {fileID: 6004883336848521092, guid: 98755f7b1d0653245b192e86821b6d69, type: 3}
       propertyPath: m_Height
