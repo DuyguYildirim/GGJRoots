@@ -12,18 +12,19 @@ public class StickmanAdventureState : State
 
     protected override void OnEnter()
     {
-        EventBus<GameLoseEvent>.AddListener(OnGameLose);
         stickmanAdventure.SetActive(true);
+        EventBus<GameLoseEvent>.AddListener(OnGameLose);
     }
 
     protected override void OnExit()
     {
-        EventBus<GameLoseEvent>.RemoveListener(OnGameLose);
         stickmanAdventure.SetActive(false);
+        EventBus<GameLoseEvent>.RemoveListener(OnGameLose);
     }
 
     private void OnGameLose(object sender, GameLoseEvent @event)
     {
         StateMachine.TransitionTo(_textAdventureState);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

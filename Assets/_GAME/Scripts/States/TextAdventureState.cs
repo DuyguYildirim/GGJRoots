@@ -9,15 +9,18 @@ namespace _GAME.Scripts.States
     public class TextAdventureState : State
     {
         [SerializeField] private GameObject TextCanvas;
+        [SerializeField] private GameObject textAdventure;
 
         protected override void OnEnter()
         {
+            textAdventure.SetActive(true);
             EventBus<TextGameWinEvent>.AddListener(OnTextGameWin);
             EventBus<GameLoseEvent>.AddListener(OnGameLose);
         }
 
         protected override void OnExit()
         {
+            textAdventure.SetActive(false);
             EventBus<TextGameWinEvent>.RemoveListener(OnTextGameWin);
             EventBus<GameLoseEvent>.RemoveListener(OnGameLose);
         }
