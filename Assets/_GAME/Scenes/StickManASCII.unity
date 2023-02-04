@@ -340,6 +340,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZombieCtrl
       objectReference: {fileID: 0}
+    - target: {fileID: 1740034982143910835, guid: 97523079a5ac890408ea71d10464ec34, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97523079a5ac890408ea71d10464ec34, type: 3}
 --- !u!1001 &2368030624104494933
