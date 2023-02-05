@@ -1,4 +1,6 @@
 using Ambrosia.EventBus;
+using DG.Tweening;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -64,6 +66,22 @@ public class Player : MonoBehaviour
                     //Destroy(hit.transform.gameObject, 10);
                 }
             }
+
+            // RaycastHit hit2;
+            // if (Input.GetKeyDown(KeyCode.E))
+            // {
+            //     if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit2,
+            //             Mathf.Infinity))
+            //     {
+            //         if (hit2.transform.gameObject.CompareTag("Door"))
+            //         {
+            //             Debug.Log("aaaaaaaaaaaaaaaaaaaaaaaaa");
+            //             hit2.transform.DOLocalMove(
+            //                 new Vector3(hit.transform.localPosition.x, hit2.transform.localPosition.y,
+            //                     hit2.transform.localPosition.z + 1.5f), 1);
+            //         }
+            //     }
+            // }
 
 
             if (Input.GetKeyDown(KeyCode.E))
