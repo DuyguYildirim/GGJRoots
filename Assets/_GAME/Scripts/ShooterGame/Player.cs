@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     [SerializeField] private Animator gunAnimator;
     [SerializeField] private ParticleSystem particle;
 
+    private int reloadGunIndex = 0;
+
     void Update()
     {
         #region Movement
@@ -50,6 +52,13 @@ public class Player : MonoBehaviour
         {
             gunAnimator.SetTrigger("isShoot");
             particle.Play();
+            reloadGunIndex += 1;
+            if (reloadGunIndex >= 2)
+            {
+                gunAnimator.SetTrigger("isReloadGun");
+                reloadGunIndex = 0;
+            }
+            
             if (Physics.Raycast(gunTransform.position, gunTransform.TransformDirection(Vector3.forward), out hit,
                     Mathf.Infinity))
             {
