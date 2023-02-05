@@ -1,6 +1,8 @@
 using System;
+using System.Collections;
 using _GAME.Scripts.Events;
 using Ambrosia.EventBus;
+using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -82,4 +84,5 @@ public class Mario : MonoBehaviour
             EventBus<GameLoseEvent>.Emit(this, new GameLoseEvent());
         }
     }
+    
 }
