@@ -12,6 +12,7 @@ public class TextGame : MonoBehaviour
     [SerializeField] private TextMeshProUGUI noText;
 
     [SerializeField] private GameObject dieText;
+    [SerializeField] private GameObject winText;
 
     private string _mainString = "";
     private string _yesString = "";
@@ -58,17 +59,18 @@ public class TextGame : MonoBehaviour
         }
 
         //Yes text 2
-        else if (Input.GetKey(KeyCode.Alpha1) && _index == 1 && _text3Active)
+        else if (Input.GetKey(KeyCode.Alpha2) && _index == 1 && _text3Active)
         {
             //Stick manli oyun
             _mainString = "You dive in the pool";
             mainText.text = _mainString;
             _text3Active = false;
-            EventBus<TextGameWinEvent>.Emit(this, new TextGameWinEvent());
+            winText.SetActive(true);
+            StartCoroutine(WaitAndWin(1));
         }
 
         //No text 2
-        else if (Input.GetKey(KeyCode.Alpha2) && _index == 1 && _text4Active)
+        else if (Input.GetKey(KeyCode.Alpha1) && _index == 1 && _text4Active)
         {
             dieText.SetActive(true);
             _dieActive = true;
@@ -135,5 +137,11 @@ public class TextGame : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTime);
         EventBus<GameLoseEvent>.Emit(this, new GameLoseEvent());
+    }
+
+    IEnumerator WaitAndWin(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        EventBus<TextGameWinEvent>.Emit(this, new TextGameWinEvent());
     }
 }

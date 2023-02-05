@@ -13,6 +13,7 @@ public class StickMan : MonoBehaviour
 
     [SerializeField] private float playerSpeed;
     [SerializeField] private GameObject dieText;
+    [SerializeField] private GameObject winText;
 
     void Update()
     {
@@ -58,7 +59,8 @@ public class StickMan : MonoBehaviour
 
         if (coll.gameObject.CompareTag("Finish"))
         {
-            EventBus<StickManGameWinEvent>.Emit(this, new StickManGameWinEvent());
+            winText.SetActive(true);
+            StartCoroutine(WaitAndWin(1));
         }
     }
 
@@ -66,5 +68,11 @@ public class StickMan : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTime);
         EventBus<GameLoseEvent>.Emit(this, new GameLoseEvent());
+    }
+
+    IEnumerator WaitAndWin(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        EventBus<StickManGameWinEvent>.Emit(this, new StickManGameWinEvent());
     }
 }

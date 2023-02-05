@@ -11,6 +11,8 @@ namespace _GAME.Scripts.States
         [SerializeField] private GameObject TextCanvas;
         [SerializeField] private GameObject textAdventure;
 
+        [SerializeField] private StickmanAdventureState _stickmanAdventureState;
+
         protected override void OnEnter()
         {
             textAdventure.SetActive(true);
@@ -33,7 +35,7 @@ namespace _GAME.Scripts.States
         private void OnTextGameWin(object sender, TextGameWinEvent @event)
         {
             TextCanvas.SetActive(false);
-            StateMachine.TransitionToNextState();
+            StateMachine.TransitionTo(_stickmanAdventureState);
         }
     }
 }
