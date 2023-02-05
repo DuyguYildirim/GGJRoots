@@ -9,6 +9,8 @@ namespace EasyClap.Game
     {
         [SerializeField] private CinemachineVirtualCamera vcam1; //Camera1
         [SerializeField] private CinemachineVirtualCamera vcam2; //Camera2
+        [SerializeField] private CinemachineVirtualCamera vcam3; //Camera3
+        [SerializeField] private CinemachineVirtualCamera vcam4; //Camera4
 
         private bool _camera1Active = true;
         
@@ -19,34 +21,29 @@ namespace EasyClap.Game
 
         private void OnEnable()
         {
-            EventBus<StickManGameWinEvent>.AddListener(OnTextWin);
+            EventBus<StickManGameWinEvent>.AddListener(OnStickManGameWin);
         }
 
         private void OnDisable()
         {
-            EventBus<StickManGameWinEvent>.RemoveListener(OnTextWin);
+            EventBus<StickManGameWinEvent>.RemoveListener(OnStickManGameWin);
         }
 
-        private void OnTextWin(object sender, StickManGameWinEvent @event)
+        private void OnStickManGameWin(object sender, StickManGameWinEvent @event)
         {
             SwitchPriority();
         }
-
-        // private void Win(object sender, WinEvent e)
-        // {
-        //     SwitchPriority();
-        // }
 
         public void SwitchPriority()
         {
             if (_camera1Active)
             {
-                vcam1.Priority = 1;
-                vcam2.Priority = 0;
+                vcam1.Priority = 100;
+                vcam2.Priority = 50;
             }
             else
             {
-                vcam1.Priority = 0;
+                vcam1.Priority = 100;
                 vcam2.Priority = 1;
             }
 

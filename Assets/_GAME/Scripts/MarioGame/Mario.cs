@@ -33,6 +33,15 @@ public class Mario : MonoBehaviour
         Vector3 move = transform.right * horizontal;
         characterController.Move(move * playerSpeed * Time.deltaTime);
 
+        if (horizontal != 0)
+        {
+            anim.SetBool("isRun", true);
+        }
+        else
+        {
+            anim.SetBool("isRun", false);
+        }
+
         #endregion
 
         #region Jump
@@ -40,6 +49,7 @@ public class Mario : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             velocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravity);
+            anim.SetTrigger("isJump");
         }
 
         #endregion
