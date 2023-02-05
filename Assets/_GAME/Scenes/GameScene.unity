@@ -1100,6 +1100,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6180114011611077079, guid: 2f82dbc476dfd464ba063b3f501cbcfb, type: 3}
+      propertyPath: m_text
+      value: Yes / A & 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180114011611077079, guid: 2f82dbc476dfd464ba063b3f501cbcfb, type: 3}
+      propertyPath: m_margin.x
+      value: -186.46045
+      objectReference: {fileID: 0}
     - target: {fileID: 6180114011943474634, guid: 2f82dbc476dfd464ba063b3f501cbcfb, type: 3}
       propertyPath: m_Name
       value: TextGameCanvas
@@ -1191,6 +1199,14 @@ PrefabInstance:
     - target: {fileID: 6180114011943474638, guid: 2f82dbc476dfd464ba063b3f501cbcfb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180114012231061936, guid: 2f82dbc476dfd464ba063b3f501cbcfb, type: 3}
+      propertyPath: m_text
+      value: No / B & 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180114012231061936, guid: 2f82dbc476dfd464ba063b3f501cbcfb, type: 3}
+      propertyPath: m_margin.x
+      value: -251.00598
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f82dbc476dfd464ba063b3f501cbcfb, type: 3}
