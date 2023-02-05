@@ -1123,63 +1123,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd240d699c6fe814691711d952427939, type: 3}
---- !u!1001 &3971958101381088265
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3971958101557671848, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3971958101557671848, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.24583563
-      objectReference: {fileID: 0}
-    - target: {fileID: 3971958101557671848, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.1055424
-      objectReference: {fileID: 0}
-    - target: {fileID: 3971958101557671848, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4.4819064
-      objectReference: {fileID: 0}
-    - target: {fileID: 3971958101557671848, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3971958101557671848, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3971958101557671848, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3971958101557671848, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3971958101557671848, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3971958101557671848, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3971958101557671848, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3971958101557671849, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}
-      propertyPath: m_Name
-      value: SkyrimGame
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}
 --- !u!1001 &6180114012704982097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1387,3 +1330,60 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4444012452853871158, guid: f7a9a5c70caa9c949889a72814b88960, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f7a9a5c70caa9c949889a72814b88960, type: 3}
+--- !u!1001 &8863061258461298045
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3971958101557671848, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971958101557671848, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.24583563
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971958101557671848, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.1055424
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971958101557671848, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.4819064
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971958101557671848, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971958101557671848, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971958101557671848, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971958101557671848, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971958101557671848, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971958101557671848, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971958101557671848, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3971958101557671849, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}
+      propertyPath: m_Name
+      value: SkyrimGame
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 74b4f68d03b461e4fad55f68d8e683b3, type: 3}

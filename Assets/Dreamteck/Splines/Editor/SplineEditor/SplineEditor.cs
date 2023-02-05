@@ -267,7 +267,7 @@ namespace Dreamteck.Splines.Editor
             if (Tools.current != Tool.None)
             {
                 lastEditorTool = Tools.current;
-                Tools.current = Tool.None;
+                //Tools.current = Tool.None;
             }
             int controlID = GUIUtility.GetControlID(FocusType.Passive);
             if (e.GetTypeForControl(controlID) == EventType.Layout) HandleUtility.AddDefaultControl(controlID);

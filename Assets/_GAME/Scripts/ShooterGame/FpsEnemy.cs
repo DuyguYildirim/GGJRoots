@@ -29,9 +29,4 @@ public class FpsEnemy : MonoBehaviour
             _particleSystem.Play();
         }
     }
-
-    private void OnTriggerEnter(Collider coll)
-    {
-        
-    }
 }
