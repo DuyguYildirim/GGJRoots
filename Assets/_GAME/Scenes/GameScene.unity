@@ -308,7 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03555cb08bea5d048901354c01a9da58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  marioGame: {fileID: 1835855690}
+  marioGame: {fileID: 3346465778287209666}
   _textAdventureState: {fileID: 974621697}
   _fpsGame: {fileID: 1839520301}
 --- !u!1 &805294491 stripped
@@ -571,11 +571,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1835855690 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3741582525392218818, guid: cd240d699c6fe814691711d952427939, type: 3}
-  m_PrefabInstance: {fileID: 2134087879951943168}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1839520299
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,6 +623,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 899728361, guid: 49fa09876a296d048a350264513e6fbd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 350729790354904474, guid: 49fa09876a296d048a350264513e6fbd, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -676,8 +675,105 @@ PrefabInstance:
       propertyPath: m_Name
       value: StickManGame
       objectReference: {fileID: 0}
+    - target: {fileID: 350729790354904475, guid: 49fa09876a296d048a350264513e6fbd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8003429474873797174, guid: 49fa09876a296d048a350264513e6fbd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00076528505
+      objectReference: {fileID: 0}
+    - target: {fileID: 8003429474873797174, guid: 49fa09876a296d048a350264513e6fbd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.11581546
+      objectReference: {fileID: 0}
+    - target: {fileID: 8003429475385840458, guid: 49fa09876a296d048a350264513e6fbd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00076528505
+      objectReference: {fileID: 0}
+    - target: {fileID: 8003429475385840458, guid: 49fa09876a296d048a350264513e6fbd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.11581546
+      objectReference: {fileID: 0}
+    - target: {fileID: 8003429475823358766, guid: 49fa09876a296d048a350264513e6fbd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00076528505
+      objectReference: {fileID: 0}
+    - target: {fileID: 8003429475823358766, guid: 49fa09876a296d048a350264513e6fbd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.11581546
+      objectReference: {fileID: 0}
+    - target: {fileID: 8003429476688791463, guid: 49fa09876a296d048a350264513e6fbd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00076528505
+      objectReference: {fileID: 0}
+    - target: {fileID: 8003429476688791463, guid: 49fa09876a296d048a350264513e6fbd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.11581546
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49fa09876a296d048a350264513e6fbd, type: 3}
+--- !u!1001 &1193152239480171338
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3741582525392218818, guid: cd240d699c6fe814691711d952427939, type: 3}
+      propertyPath: m_Name
+      value: MarioGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741582525392218818, guid: cd240d699c6fe814691711d952427939, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741582525392218819, guid: cd240d699c6fe814691711d952427939, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741582525392218819, guid: cd240d699c6fe814691711d952427939, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741582525392218819, guid: cd240d699c6fe814691711d952427939, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741582525392218819, guid: cd240d699c6fe814691711d952427939, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741582525392218819, guid: cd240d699c6fe814691711d952427939, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741582525392218819, guid: cd240d699c6fe814691711d952427939, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741582525392218819, guid: cd240d699c6fe814691711d952427939, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741582525392218819, guid: cd240d699c6fe814691711d952427939, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741582525392218819, guid: cd240d699c6fe814691711d952427939, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741582525392218819, guid: cd240d699c6fe814691711d952427939, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3741582525392218819, guid: cd240d699c6fe814691711d952427939, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cd240d699c6fe814691711d952427939, type: 3}
 --- !u!1 &2078890594077472672
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,63 +874,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1001 &2134087879951943168
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3741582525392218818, guid: cd240d699c6fe814691711d952427939, type: 3}
-      propertyPath: m_Name
-      value: MarioGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 3741582525392218819, guid: cd240d699c6fe814691711d952427939, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3741582525392218819, guid: cd240d699c6fe814691711d952427939, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 15.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 3741582525392218819, guid: cd240d699c6fe814691711d952427939, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3741582525392218819, guid: cd240d699c6fe814691711d952427939, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3741582525392218819, guid: cd240d699c6fe814691711d952427939, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3741582525392218819, guid: cd240d699c6fe814691711d952427939, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3741582525392218819, guid: cd240d699c6fe814691711d952427939, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3741582525392218819, guid: cd240d699c6fe814691711d952427939, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3741582525392218819, guid: cd240d699c6fe814691711d952427939, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3741582525392218819, guid: cd240d699c6fe814691711d952427939, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3741582525392218819, guid: cd240d699c6fe814691711d952427939, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: cd240d699c6fe814691711d952427939, type: 3}
+--- !u!1 &3346465778287209666 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3741582525392218818, guid: cd240d699c6fe814691711d952427939, type: 3}
+  m_PrefabInstance: {fileID: 1193152239480171338}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6180114012704982097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -842,9 +886,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2078890593744376788, guid: 2f82dbc476dfd464ba063b3f501cbcfb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6180114011943474634, guid: 2f82dbc476dfd464ba063b3f501cbcfb, type: 3}
       propertyPath: m_Name
       value: TextGameCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180114011943474634, guid: 2f82dbc476dfd464ba063b3f501cbcfb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6180114011943474638, guid: 2f82dbc476dfd464ba063b3f501cbcfb, type: 3}
       propertyPath: m_Pivot.x

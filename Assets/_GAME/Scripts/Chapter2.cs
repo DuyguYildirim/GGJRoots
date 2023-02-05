@@ -26,6 +26,6 @@ public class Chapter2 : MonoBehaviour
     IEnumerator WaitAndChapter(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
-        chapterText.transform.DOMove(new Vector3(0, 3000, 0), 1);
+        chapterText.transform.DOLocalMove(new Vector3(0, 3000, 0), 1);
     }
 }

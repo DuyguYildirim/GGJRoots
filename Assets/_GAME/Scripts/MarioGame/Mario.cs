@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using _GAME.Scripts.Events;
 using Ambrosia.EventBus;
 using DG.Tweening;
@@ -74,7 +75,6 @@ public class Mario : MonoBehaviour
         if (coll.gameObject.CompareTag("Finish"))
         {
             //Win
-            Debug.Log("6666666666666666666666666666666666666666666");
             EventBus<MarioWinEvent>.Emit(this, new MarioWinEvent());
         }
 
@@ -84,4 +84,5 @@ public class Mario : MonoBehaviour
             EventBus<GameLoseEvent>.Emit(this, new GameLoseEvent());
         }
     }
+    
 }
