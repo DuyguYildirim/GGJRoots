@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -13,6 +14,9 @@ public class Player : MonoBehaviour
     [SerializeField] private float rotationsPerMinute;
 
     [SerializeField] private Transform gunTransform;
+
+    [SerializeField] private Animator gunAnimator;
+    [SerializeField] private ParticleSystem particle;
 
     void Update()
     {
@@ -44,6 +48,8 @@ public class Player : MonoBehaviour
         RaycastHit hit;
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            gunAnimator.SetTrigger("isShoot");
+            particle.Play();
             if (Physics.Raycast(gunTransform.position, gunTransform.TransformDirection(Vector3.forward), out hit,
                     Mathf.Infinity))
             {
