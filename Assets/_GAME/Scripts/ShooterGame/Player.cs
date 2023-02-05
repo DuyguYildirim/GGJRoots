@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
-using Unity.VisualScripting;
+using Ambrosia.EventBus;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -58,14 +54,14 @@ public class Player : MonoBehaviour
                 gunAnimator.SetTrigger("isReloadGun");
                 reloadGunIndex = 0;
             }
-            
+
             if (Physics.Raycast(gunTransform.position, gunTransform.TransformDirection(Vector3.forward), out hit,
                     Mathf.Infinity))
             {
                 if (hit.transform.gameObject.CompareTag("Enemy"))
                 {
-                    Debug.Log("Did Hit");
-                    Destroy(hit.transform.gameObject);
+                    EventBus<isShootEnemyEvent>.Emit(this, new isShootEnemyEvent(hit.transform.gameObject));
+                    //Destroy(hit.transform.gameObject, 10);
                 }
             }
 
