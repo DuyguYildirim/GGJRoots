@@ -20,6 +20,8 @@ public class Mario : MonoBehaviour
     [SerializeField] private float distance = 0.3f;
 
     [SerializeField] private float jumpHeight;
+    
+    [SerializeField] private float jumpSpeed;
 
     [SerializeField] private float gravity;
 
@@ -50,7 +52,7 @@ public class Mario : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            velocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravity);
+            velocity.y += Mathf.Sqrt(jumpHeight * jumpSpeed * gravity);
             anim.SetTrigger("isJump");
         }
 
