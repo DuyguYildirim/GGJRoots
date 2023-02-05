@@ -457,7 +457,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4444012452424289388
 Transform:
   m_ObjectHideFlags: 0
@@ -669,6 +669,8 @@ MonoBehaviour:
   playerSpeed: 10
   rotationsPerMinute: 10
   gunTransform: {fileID: 4444012453348087052}
+  gunAnimator: {fileID: 2289745223468297975}
+  particle: {fileID: 6769308231173218975}
 --- !u!1 &4444012453024602068
 GameObject:
   m_ObjectHideFlags: 0
@@ -6877,6 +6879,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 19820740, guid: c2e25eb85e344ab458d7fe63d22782b6, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19870716, guid: c2e25eb85e344ab458d7fe63d22782b6, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 19870716, guid: c2e25eb85e344ab458d7fe63d22782b6, type: 3}
       propertyPath: InitialModule.startRotationX.minMaxState
       value: 3
@@ -6884,6 +6894,14 @@ PrefabInstance:
     - target: {fileID: 19870716, guid: c2e25eb85e344ab458d7fe63d22782b6, type: 3}
       propertyPath: InitialModule.startRotationY.minMaxState
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19883498, guid: c2e25eb85e344ab458d7fe63d22782b6, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19891528, guid: c2e25eb85e344ab458d7fe63d22782b6, type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19891528, guid: c2e25eb85e344ab458d7fe63d22782b6, type: 3}
       propertyPath: InitialModule.startColor.maxColor.a
@@ -6907,6 +6925,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2e25eb85e344ab458d7fe63d22782b6, type: 3}
+--- !u!198 &6769308231173218975 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19891528, guid: c2e25eb85e344ab458d7fe63d22782b6, type: 3}
+  m_PrefabInstance: {fileID: 6769308231188260823}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6769308231188472391 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 476560, guid: c2e25eb85e344ab458d7fe63d22782b6, type: 3}
