@@ -11,16 +11,24 @@ public class MarioAdventureState : State
 {
     [SerializeField] private GameObject marioGame;
     [SerializeField] private TextAdventureState _textAdventureState;
+    [SerializeField] private FpsGameState _fpsGame;
     protected override void OnEnter()
     {
         marioGame.SetActive(true);
         EventBus<GameLoseEvent>.AddListener(OnGameLose);
+        EventBus<MarioWinEvent>.AddListener(OnMarioWin);
     }
 
     protected override void OnExit()
     {
         marioGame.SetActive(false);
         EventBus<GameLoseEvent>.RemoveListener(OnGameLose);
+        EventBus<MarioWinEvent>.RemoveListener(OnMarioWin);
+    }
+
+    private void OnMarioWin(object sender, MarioWinEvent @event)
+    {
+        StateMachine.TransitionTo(_fpsGame);
     }
 
     private void OnGameLose(object sender, GameLoseEvent @event)

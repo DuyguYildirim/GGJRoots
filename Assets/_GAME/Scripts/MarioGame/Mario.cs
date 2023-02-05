@@ -1,4 +1,7 @@
 using System;
+using _GAME.Scripts.Events;
+using Ambrosia.EventBus;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Mario : MonoBehaviour
@@ -53,5 +56,20 @@ public class Mario : MonoBehaviour
         characterController.Move(velocity * Time.deltaTime);
 
         #endregion
+    }
+
+    private void OnTriggerEnter(Collider coll)
+    {
+        if (coll.gameObject.CompareTag("Finish"))
+        {
+            //Win
+            EventBus<MarioWinEvent>.Emit(this, new MarioWinEvent());
+        }
+
+        if (coll.gameObject.CompareTag("Lose"))
+        {
+            //Die
+            EventBus<GameLoseEvent>.Emit(this, new GameLoseEvent());
+        }
     }
 }

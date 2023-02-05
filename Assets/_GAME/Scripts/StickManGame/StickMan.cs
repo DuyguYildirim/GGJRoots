@@ -57,7 +57,7 @@ public class StickMan : MonoBehaviour
             //UI çıkıcak buttona basınca oyun tekrar başlıcak
         }
 
-        if (coll.gameObject.CompareTag("Finish"))
+        if (coll.gameObject.CompareTag("StickFinish"))
         {
             winText.SetActive(true);
             StartCoroutine(WaitAndWin(1));

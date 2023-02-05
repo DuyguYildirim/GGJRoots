@@ -310,6 +310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   marioGame: {fileID: 1835855690}
   _textAdventureState: {fileID: 974621697}
+  _fpsGame: {fileID: 1839520301}
 --- !u!1 &805294491 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6180114011943474634, guid: 2f82dbc476dfd464ba063b3f501cbcfb, type: 3}
@@ -362,6 +363,11 @@ MonoBehaviour:
   TextCanvas: {fileID: 805294491}
   textAdventure: {fileID: 805294491}
   _stickmanAdventureState: {fileID: 285289425}
+--- !u!1 &1136955183 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4444012452424289395, guid: f7a9a5c70caa9c949889a72814b88960, type: 3}
+  m_PrefabInstance: {fileID: 6769308232189546497}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1320603246 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 350729790354904475, guid: 49fa09876a296d048a350264513e6fbd, type: 3}
@@ -399,6 +405,7 @@ Transform:
   - {fileID: 974621696}
   - {fileID: 285289424}
   - {fileID: 805190065}
+  - {fileID: 1839520300}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -418,6 +425,7 @@ MonoBehaviour:
   - {fileID: 974621697}
   - {fileID: 285289425}
   - {fileID: 805190066}
+  - {fileID: 1839520301}
 --- !u!1 &1742827521
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,6 +530,51 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3741582525392218818, guid: cd240d699c6fe814691711d952427939, type: 3}
   m_PrefabInstance: {fileID: 2134087879951943168}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1839520299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1839520300}
+  - component: {fileID: 1839520301}
+  m_Layer: 0
+  m_Name: FPSAdventureState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1839520300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839520299}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1350538447}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1839520301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839520299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6a79ebfacfa4031adbac0cdf7e8a28c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpsGame: {fileID: 1136955183}
 --- !u!1001 &50845751452733981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -529,6 +582,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1078690379, guid: 49fa09876a296d048a350264513e6fbd, type: 3}
+      propertyPath: m_TagString
+      value: StickFinish
+      objectReference: {fileID: 0}
     - target: {fileID: 350729790354904474, guid: 49fa09876a296d048a350264513e6fbd, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -576,6 +633,10 @@ PrefabInstance:
     - target: {fileID: 350729790354904475, guid: 49fa09876a296d048a350264513e6fbd, type: 3}
       propertyPath: m_Name
       value: StickManGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 350729790354904475, guid: 49fa09876a296d048a350264513e6fbd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49fa09876a296d048a350264513e6fbd, type: 3}
