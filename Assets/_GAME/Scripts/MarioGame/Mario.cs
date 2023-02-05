@@ -1,6 +1,7 @@
 using System;
 using _GAME.Scripts.Events;
 using Ambrosia.EventBus;
+using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -73,6 +74,7 @@ public class Mario : MonoBehaviour
         if (coll.gameObject.CompareTag("Finish"))
         {
             //Win
+            Debug.Log("6666666666666666666666666666666666666666666");
             EventBus<MarioWinEvent>.Emit(this, new MarioWinEvent());
         }
 

@@ -1,6 +1,7 @@
 using _GAME.Scripts.Events;
 using Ambrosia.EventBus;
 using Ambrosia.StateMachine;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +13,7 @@ namespace _GAME.Scripts.States
         [SerializeField] private GameObject textAdventure;
 
         [SerializeField] private StickmanAdventureState _stickmanAdventureState;
+
 
         protected override void OnEnter()
         {
